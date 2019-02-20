@@ -50,8 +50,6 @@ function createRecycle() {
     // Henter værdier fra input form
     let beskrivelse = document.querySelector('#add-recycle-form input[name=beskrivelse]').value;
     let address = document.querySelector('#add-recycle-form input[name=address]').value;
-        
-    let selectedimage = "" ;
 
     // Nyt objekt kaldes
     let newrecycle = {

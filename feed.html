@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReJoy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/maxlength-contenteditable@1.0.1/dist/maxlength-contenteditable.js"></script>
+</head>
+
+<body>
+
+    <main id="feedmain">
+
+        <!-- Header med logo -->
+
+        <header id="headerfeed" class="item-header">
+
+            <img src="images/ReJoy.png" alt="logorejoy">
+
+        </header>
+
+        <!-- Filter og søgefunktion -->
+
+        <div class="item-search" id="searchcontainer">
+
+            <img class="filter searchflexbox" id="filterbtn" src="images/filter.png" alt="filter">
+
+            <input class="searchflex searchflexbox" type="text" id="myInput" onkeyup="myFunction()" placeholder="Søg efter skjulte skatte" title="Type in a name">
+            <button class="loop searchflexbox" type="submit"><img src="images/loop.png"  alt="loop"></button>
+
+        </div>
+
+        <!-- I nærheden og Nyeste - Buttons -->
+
+        <div class="item-btn">
+            <button class="btnsearch1">I Nærheden</button>
+
+            <button class="btnsearch2">Nyeste</button>
+
+        </div>
+
+        <!-- Produkter på feedsiden -->
+
+        <section id="grid-teachers" class="grid-container item-product"></section>
+
+
+        <!-- TILFØJ GENBRUG - POPUP -->
+
+        <div id="modal-1" class="modal">
+
+            <div class="modal-content">
+                <form id="add-recycle-form" class="form ">
+                    <span class="close">&times;</span>
+                    <h2 id="h2add">Tilføj genbrug</h2>
+                    <p>Beskrivelse</p>
+                    <input class="modalinput" type="text" name="beskrivelse" placeholder="Indtast beskrivelse" maxlength="15" required>
+                    <p>Placering</p>
+                    <input class="modalinput modalinput2" type="text" name="address" placeholder="Indtast placering" maxlength="115" required>
+                    <img class="imgupload" src="images/lokation.png" alt="placering">
+                    <p>Tilføj billede</p>
+
+                    <input class="modalinput modalinput3" id="fileupload" type="file" name="fileupload" onchange="previewFile()">
+                    
+
+                    <!--
+              <input class="modalinput modalinput3" type="file" name="fileupload" value="fileupload" id="fileupload">
+              -->
+
+                    <img class="imgupload2" src="images/addimg.png" alt="add picture">
+                    <button id="modalbtn" type="button" name="button" onclick="createRecycle()">Tilføj</button>
+                </form>
+            </div>
+
+        </div>
+
+
+        <!-- FILTER - POPUP -->
+
+        <div id="modal-2" class="modal">
+            <div class="modal-content">
+                <h1>FILTER</h1>
+
+                <div id="filterform1">
+                    
+                    <span class="closefilter">&times;</span>
+
+                    <label class="containerfilter">Møbler
+                      <input type="radio" checked="checked" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Sofaer
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Stole
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Service
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Borde
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Lænestole
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+
+                </div>
+
+                <div id="filterform2">
+
+                    <label class="containerfilter">Sengeborde
+                      <input type="radio" checked="checked" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Spiseborde
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Tøj
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Sko
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Kommoder
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="containerfilter">Skabe
+                      <input type="radio" name="radio">
+                      <span class="checkmark"></span>
+                    </label>
+
+                </div>
+
+
+                <div class="slidecontainer">
+                    <p id="pafstand">Afstand i km</p>
+                    <input type="range" min="1" max="20" value="10" class="slider" id="myRange">
+                    <div id="rangecontainer">
+                        <p class="range">1</p>
+                        <p class="range">2</p>
+                        <p class="range">3</p>
+                        <p class="range">4</p>
+                        <p class="range">5</p>
+                        <p class="range">10</p>
+                        <p class="range">20</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROFIL - POPUP -->
+
+        <div id="modal-3" class="modal">
+
+            <div class="modal-content">
+                
+                <span class="closeprofil">&times;</span>
+
+                <h1>MIN PROFIL</h1>
+
+                <img id="profilimg" src="images/profilimg.png" alt="profilbillede">
+
+                <section id="profiletext">
+
+                    <img id="profileedit" src="images/edit.png" alt="">
+
+                    <h3 contenteditable="true" id="profilename">Louise</h3>
+
+                    <p class="profilp">25 år <br><br>Aarhus C</p>
+
+                    <p class="profilpsmall">Medlem siden April</p>
+
+                </section>
+
+            </div>
+
+        </div>
+
+        <!-- GEMT - POPUP -->
+
+        <div id="modal-4" class="modal">
+
+            <div class="modal-content">
+                
+                <span class="closesaved">&times;</span>
+
+                <h1>MINE GEMTE</h1>
+                
+                <section id="grid-saved" class="grid-container-saved item-product-saved"></section>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTIFIKATIONER - POPUP -->
+
+        <div id="modal-5" class="modal">
+
+            <div class="modal-content">
+                
+                <span class="closenotifikation">&times;</span>
+
+                <h1 id="h1not">NOTIFIKATIONER</h1>
+
+                <section class="notifikationsec">
+                    
+                    <p class="pnot notflex">Sofa grå, vestergade 18 er afhentet</p>
+                
+                    <img class="imgnot notflex" src="images/notcheck.png" alt="checkmark">
+
+                </section>
+                
+                <section class="notifikationsec">
+                    
+                    <p class="pnot notflex">Stuebord, Dannebrogsgade 10 er afhentet</p>
+                
+                    <img class="imgnot notflex" src="images/notcheck.png" alt="checkmark">
+
+                </section>
+                
+                <section class="notifikationsec">
+                    
+                    <p class="pnot notflex">8 stk vinglas, skanderborgvej 45 er afhentet</p>
+                
+                    <img class="imgnot notflex" src="images/notcheck.png" alt="checkmark">
+
+                </section>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCT POP UP -->
+
+        <div id="modal-6" class="modal">
+
+            <div class="modal-content">
+                
+                <span class="closeproduct">&times;</span>
+
+                <h1>Sort Sofa, vestergade 18</h1>
+
+                <img id="productsofa" src="images/sortsofa.jpg" alt="sofa">
+
+                <div id="map"></div>
+
+                <a href="https://www.google.com/maps/dir//Vestergade+18,+8000+Aarhus,+Danmark/@56.1577274,10.2044285,19z/data=!4m17!1m7!3m6!1s0x464c3f94731da1cf:0x253b703e2e416059!2sVestergade+18,+8000+Aarhus,+Danmark!3b1!8m2!3d56.1577274!4d10.2049757!4m8!1m0!1m5!1m1!1s0x464c3f94731da1cf:0x253b703e2e416059!2m2!1d10.2049757!2d56.1577274!3e2?hl=da-DK" target="_blank"><button id="rutevejledning">Få rutevejledning</button> </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer med menu/navigation -->
+
+        <footer class="item-footer">
+
+            <nav id="navbot">
+                <ul id="navbotcontainer">
+                    <li><img class="navbotimg" src="images/burger.png" alt="burgermenu"></li>
+                    
+                    <li><img id="btnprofil" class="navbotimg" src="images/profil.png" alt="burgermenu"></li>
+
+                    <li><img class="navbotimg" id="navbotplus" src="images/plus.png" alt="burgermenu"></li>
+
+                    <li><img id="btngemt" class="navbotimg" src="images/hjerte.png" alt="burgermenu"></li>
+
+                    <li><img id="btnnot" class="navbotimg" src="images/notifikationer.png" alt="burgermenu"></li>
+                </ul>
+            </nav>
+
+            <!-- BURGERMENU DER ÅBNER START-->
+
+
+            <div id="burgermenu">
+                <div class="bg"></div>
+
+                <div class="button" tabindex="0"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </div>
+
+                <div id="burger-content">
+                    <ul class="listen">
+                        <li><img src="images/indstillingericon.png" alt=""><a href="#0">Indstillinger</a></li>
+                        <li><img src="images/chaticon.png" alt=""><a href="#0">Hjælp</a></li>
+                        <li><img src="images/logudicon.png" alt=""><a href="index.html">Log ud</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BURGERMENU DER ÅBNER SLUT -->
+
+        </footer>
+
+    </main>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABA3NdOsnoiAtwWvJOl46u3Ekx1AOTwCM&callback=initMap">
+    </script>
+
+    <script src="Javascript.js"></script>
+
+</body>
+
+</html>

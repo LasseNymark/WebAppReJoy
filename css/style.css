@@ -1,0 +1,955 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 375px;
+    margin: 0 auto;
+    font-family: 'Raleway';
+}
+
+/* ----- INDEX ---- */
+
+#indexmain,
+#opretmain,
+#logindmain {
+    background-color: #B2C1B7;
+    height: 667px;
+}
+
+#indexrejoy {
+    width: 250px;
+    height: auto;
+    margin: 150px 62.5px 60px;
+}
+
+#indexh1 {
+    text-align: center;
+    font-weight: 100;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#indexp {
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#indexp a {
+    text-decoration: underline;
+    color: aliceblue;
+}
+
+/* Buttons på index */
+
+.indexbtn {
+    box-sizing: border-box;
+    position: relative;
+    width: 240px;
+    margin: 4px 67.5px;
+    padding: 0 15px 0 46px;
+    border: none;
+    text-align: left;
+    line-height: 34px;
+    white-space: nowrap;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.indexbtn:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 100%;
+}
+
+.indexbtn:focus {
+    outline: none;
+}
+
+.indexbtn:active {
+    box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
+}
+
+/* FACEBOOK button */
+
+#btnfacebook {
+    background-color: #4C69BA;
+    background-image: linear-gradient(#4C69BA, #3B55A0);
+    text-shadow: 0 -1px 0 #354C8C;
+    margin: 10px 67.5px;
+}
+
+#btnfacebook:before {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+
+#btnfacebook:hover,
+#btnfacebook:focus {
+    background-color: #5B7BD5;
+    background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+/* GOOGLE button */
+
+/* Google */
+
+#btngoogle {
+    background: #DD4B39;
+    margin: 10px 67.5px;
+}
+
+#btngoogle:before {
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+}
+
+#btngoogle:hover,
+#btngoogle:focus {
+    background: #E74B37;
+}
+
+/* EMAIL button */
+
+#btnemail {
+    margin: 10px 67.5px;
+    background: #fff;
+    color: #000;
+}
+
+#btnemail:hover,
+#btnemail:focus {
+    background: #EEE;
+}
+
+/* ----- INDEX SLUT ----- */
+
+/* LOG IND OG OPRET */
+
+.tilmeldrejoy {
+    width: 40%;
+    margin: 50px 30% 0;
+}
+
+.backarrow {
+    position: absolute;
+    width: 13%;
+    top: 60px;
+    left: 40px;
+}
+
+.opreth1 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 10px 0;
+}
+
+/* LOG IND OG OPRET SLUT */
+
+/* ----- LOG IND ----- */
+
+#logindh1 {
+    margin: 120px 0 20px;
+    font-weight: 100;
+    font-size: 200%;
+}
+
+#loginform {
+    width: 80%;
+    margin: 10px 10%;
+}
+
+#loginform p {
+    font-size: 140%;
+    margin: 20px 0 10px 0;
+}
+
+#loginform input {
+    width: 100%;
+    height: 35px;
+    border: solid 1px #B2C1B7;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#btnlogind {
+    width: 35%;
+    margin: 0 32.5%;
+    padding: 10px 25px;
+    background-color: #626F6A;
+    color: #fff;
+    border: #626F6A solid 1px;
+    border-radius: 7px;
+}
+
+/* ----- LOG IND SLUT ----- */
+
+/* ----- OPRET BRUGER ----- */
+
+.inputp {
+    margin: 13px 0 -10px 0;
+    color: #626F6A;
+}
+
+#opretform {
+    width: 75%;
+    margin: 10px 10% 0 10%;
+}
+
+.inputform {
+    width: 100%;
+    height: 35px;
+    border: solid 1px #B2C1B7;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+#checkbox {
+    height: 20px;
+    width: 20px;
+    margin: 3px 0;
+    border-radius: 5px;
+    background-color: #FFF;
+}
+
+#pbetingelser {
+    margin: 0;
+    float: right;
+    font-size: 90%;
+}
+
+#spanbetingelser {
+    text-decoration: underline;
+}
+
+#btntilmeld {
+    width: 35%;
+    margin: 0 32.5%;
+    padding: 10px 25px;
+    background-color: #626F6A;
+    color: #fff;
+    border: #626F6A solid 1px;
+    border-radius: 7px;
+}
+
+/* ----- OPRET BRUGER SLUT ----- */
+
+/* ----- FEED ----- */
+
+.item-header {
+    grid-area: header;
+}
+
+.item-search {
+    grid-area: search;
+}
+
+.item-btn {
+    grid-area: btn;
+}
+
+.item-product {
+    grid-area: product;
+}
+
+.item-footer {
+    grid-area: footer;
+}
+
+#feedmain {
+    display: grid;
+    grid-template-columns: 187.5px 187.5px;
+    grid-template-rows: auto;
+    grid-template-areas: "header header" "search search" "btn btn" "product product" "footer footer";
+}
+
+/* HEADER med logo */
+
+#headerfeed {
+    background-color: #B2C1B7;
+    height: 94px;
+}
+
+#headerfeed img {
+    width: 105px;
+    height: 36px;
+    margin: 47px 135px 11px 135px;
+}
+
+/* FLEXBOX på search */
+
+#searchcontainer {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.filter {
+    width: 37px;
+    height: 34px;
+    margin: 32px 14px 23px 39px;
+}
+
+.searchflex {
+    width: 180px;
+    height: 40px;
+    margin: 27px 0px 17px 0;
+    padding-left: 15px;
+    border: 1px solid #f0f3f1;
+    border-radius: 10px 0 0 10px;
+    background-color: #f0f3f1;
+}
+
+.loop {
+    width: 48px;
+    height: 44px;
+    margin: 27px 10px 17px -4px;
+    border: solid 1px #E4AC83;
+    background-color: #E4AC83;
+    ;
+    border-radius: 0 10px 10px 0;
+}
+
+.loop img {
+    width: 22px;
+    height: 22px;
+}
+
+/* Buttons - I nærheden og nyeste */
+
+.btnsearch1 {
+    width: 145px;
+    margin: 10px 5px 10px 37.5px;
+    background-color: #BBCFC2;
+    border: 0px solid #BBCFC2;
+    border-radius: 10px 0 0 10px;
+    height: 30px;
+    color: #7C9082;
+}
+
+.btnsearch2 {
+    width: 145px;
+    margin: 10px 30.5px 10px 5px;
+    background-color: #D6E3D3;
+    border: 0px solid #D6E3D3;
+    height: 30px;
+    border-radius: 0 10px 10px 0;
+    color: #7C9082;
+}
+
+/* Grid på produkter */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.grid-container > article img {
+    width: 100%;
+    height: 130px;
+}
+
+/* Hjerter */
+
+#heart {
+  display: none;
+}
+
+[for="heart"] {
+  color: darkgrey;
+  cursor: pointer;
+  font-size: 30px;
+  align-self: center;
+  position: relative;
+  left: 50px;
+  bottom: 97px;
+}
+
+[for="heart"]::selection {
+  color: none;
+  background: transparent;
+}
+
+[for="heart"]::moz-selection {
+  color: none;
+  background: transparent;
+}
+
+#heart:checked + #label1 {
+  color: #E4AC83;
+  will-change: font-size;
+}
+
+@keyframes heart {0%, 17.5% {font-size: 0;}}
+
+.grid-container > article {
+    text-align: center;
+    padding: 10px 10px 0 10px;
+    margin: 5px;
+    background-color: #f0f3f1;
+    max-height: 240px;
+}
+
+.grid-container > article h3 {
+    width: 100%;
+    text-align: left;
+    font-size: 80%;
+    color: #7C9082;
+}
+
+.grid-container > article h2 {
+    text-align: left;
+    color: #7C9082;
+    font-size: 80%;
+    padding: 10px 0;
+    max-width: 70%;
+}
+
+
+/* ----- FEED SLUT ----- */
+
+/* --- Tilføj Genbrug */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 110px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    position: relative;
+    background-color: #B2C1B7;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #B2C1B7;
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+}
+
+#h2add {
+    color: #fff;
+    font-family: 'Raleway';
+}
+
+#modalbtn {
+    font-weight: 200;
+    text-align: center;
+    margin: 10px 94px 0;
+    cursor: pointer;
+    border: none;
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 0;
+    color: #ffffff !important;
+    background-color: #7a9689;
+    border-radius: 5px;
+    width: 125px;
+}
+
+.modalinput {
+    margin: 1em auto;
+    width: 100%;
+    max-width: 350px;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.modalinput2 {
+    margin: 1em auto;
+    width: 80%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+.modalinput3 {
+    border: none;
+}
+
+.imgupload {
+    width: 25px;
+    position: absolute;
+    right: 40px;
+    top: 220px;
+}
+
+.imgupload2 {
+    width: 30px;
+    position: absolute;
+    right: 35px;
+    top: 315px;
+}
+
+/* --- FILTER --- */
+
+#myFilter {
+    background-color: #fff;
+    position: absolute;
+    top: 110px;
+    padding: 20px;
+    margin: auto 15px;
+    border: 1px solid #B2C1B7;
+    border-radius: 5px;
+    width: 300px;
+    height: 400px;
+}
+
+.modal-content h1 {
+    text-align: center;
+    font-size: 130%;
+    color: #fff;
+    margin-top: 0;
+}
+
+#filterform1,
+#filterform2 {
+    width: 40%;
+    color: #7C9082;
+    margin: 20px 5% 0;
+    text-align: left;
+}
+
+.containerfilter {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    user-select: none;
+}
+
+.containerfilter input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 2px solid #7C9082;
+    border-radius: 50%;
+}
+
+.containerfilter input:checked ~ .checkmark {
+    background-color: #7C9082;
+}
+
+#filterform1 {
+    float: left;
+}
+
+#filterform2 {
+    float: right;
+}
+
+/* SLIDER i filtersøgning */
+
+.slidecontainer {
+    position: absolute;
+    top: 300px;
+    left: -2px;
+    width: 80%;
+    margin: 10px 10% 20px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    background: #fff;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #E4AC83;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#pafstand {
+    color: #fff;
+    font-size: 120%;
+    margin: 0;
+}
+
+#rangecontainer {
+    display: flex;
+    width: 100%;
+    margin: 0;
+
+}
+
+.range {
+    color: #fff;
+    align-items: center;
+    align-content: space-between;
+    margin-right: 30px;
+    margin-left: 3px;
+}
+
+/* --- PROFIL --- */
+
+#profilimg {
+    width: 50%;
+    margin: 0 25%;
+    border-radius: 50%;
+}
+
+#profileedit {
+    position: absolute;
+    width: 20px;
+    right: 10px;
+    top: 10px;
+}
+
+#profiletext {
+    background-color: #7a9689;
+    padding: 1px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 30px 5%;
+    position: relative;
+}
+
+#profilename {
+    color: #fff;
+    text-align: center;
+    font-size: 110%;
+}
+
+.profilp {
+    color: #fff;
+    text-align: center;
+    font-size: 90%;
+}
+
+.profilpsmall {
+    color: #fff;
+    text-align: center;
+    font-size: 60%;
+}
+
+/* --- GEMT --- */
+
+#savedart{
+    background-color: #829588;
+    height: 100px;
+    margin: 10px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+#savedimg{
+    width: 40%;
+    height:80%;
+    float: left;
+    margin: 4% 5%;
+    border-radius: 10px;
+}
+
+#savedh3{
+    color: #fff;
+    float: right;
+    font-size:110% ;
+    text-align: center;
+    margin:30px 14px 10px 0;
+    height: 10% ;
+    width: 45%;
+}
+
+/* --- NOTIFIKATIONER --- */
+
+#h1not{
+    margin: 10px 0 30px;
+}
+
+.notifikationsec{
+    background-color: #829588;
+    border-radius: 7px;
+    margin: 10px;
+    display: flex;
+    padding: 5px 10px;
+}
+
+.notflex{
+    align-items: baseline;
+}
+
+.imgnot{
+    height: 50%;
+    width: auto;
+    margin: 10% 10px;
+}
+
+.pnot{
+    color: #fff;
+}
+
+/* --- PRODUCT PAGE --- */
+
+#productsofa {
+    width: 75%;
+    height: 115px;
+    margin: 5px 12.5%;
+    border-radius: 10px;
+}
+
+#sortsofa {
+    color: #fff;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 5px;
+}
+
+#rutevejledning {
+    width: 60%;
+    height: 30px;
+    color: #fff;
+    background-color: #7a9689;
+    border: none;
+    border-radius: 10px;
+    padding: 0;
+    margin: 5px 20% 10px;
+    font-size: 100%;
+}
+
+#map {
+    height: 175px;
+    width: 75%;
+    margin: 10px 12.5%;
+    z-index: 10;
+}
+
+/* ----- CLOSE SPANS ----- */
+
+/* The Close Button */
+
+.close {
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    top: -30px;
+}
+
+.closefilter{
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    top: -70px;
+    left: 160px;
+}
+
+.closenotifikation{
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+}
+
+.closesaved{
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+}
+
+.closeprofil{
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+}
+
+.closeproduct{
+    color: #fff;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    top: -15px;
+}
+
+/* ----- FOOTER ----- */
+
+.item-footer {
+    margin-top: 85px;
+    width: 375px;
+}
+
+#navbot {
+    background-color: #B2C1B7;
+    width: 375px;
+    height: 75px;
+    position: fixed;
+    bottom: 0;
+}
+
+#navbotcontainer {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 25px 5px 25px;
+}
+
+.navbotimg {}
+
+.navbotimg {
+    width: 27px;
+}
+
+#navbotplus {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom: 35px;
+    left: 147px;
+}
+
+/* BURGERMENU */
+
+#burgermenu .bg {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s, visibility 0s;
+    background: #000;
+}
+
+#burgermenu:focus-within .bg {
+    visibility: visible;
+    opacity: .6;
+    z-index: 19;
+}
+
+#burgermenu * {
+    visibility: visible;
+}
+
+.button {
+    position: fixed;
+    bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    height: 70px;
+    width: 30px;
+    cursor: pointer;
+    pointer-events: auto;
+    margin-left: 25px;
+}
+
+.icon-bar {
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+    transition: .3s;
+}
+
+.listen {
+    margin-top: 200%;
+    margin-left: 18%;
+    font-size: 70%;
+}
+
+.listen img {
+    width: 20%;
+    float: left;
+    margin-bottom: 5%;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+#burger-content {
+    padding: 20px;
+    width: 40%;
+    max-width: 300px;
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 100%;
+    background: white;
+    pointer-events: auto;
+    transform: translateX(-100%);
+    transition: transform .3s;
+    will-change: transform;
+}
+
+#burger-content ul {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 180%;
+    margin-left: -50px;
+    list-style: none;
+    text-decoration: none;
+}
+
+#burger-content li a {
+    padding: 10px 5px;
+    display: block;
+    text-transform: uppercase;
+    transition: color .1s;
+    list-style: none;
+    text-decoration: none;
+    color: #B2C1B7;
+}
+
+#burgermenu:focus-within #burger-content {
+    transform: none;
+}

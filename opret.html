@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReJoy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/maxlength-contenteditable@1.0.1/dist/maxlength-contenteditable.js"></script>
+</head>
+
+<body>
+
+   <main id="opretmain">
+       
+       <section id="opretsec">
+          
+          <a href="index.html"><img class="backarrow" src="images/backarrow.png" alt="backarrow"></a>
+            
+          <img class="tilmeldrejoy" src="images/ReJoy.png" alt="logo">
+                    
+          <h1 class="h1 opreth1">Opret bruger</h1>
+           
+           <form id="opretform">
+                <p class="inputp">Fornavn</p><br>
+                <input class="inputform" type="text" name="firstname" placeholder="Indtast navn" required>
+                <br>
+                <p class="inputp">Efternavn</p><br>
+                <input class="inputform" type="text" name="lastname" placeholder="Indtast efternavn" required>
+                <br>
+                <p class="inputp">Email</p><br>
+                <input class="inputform" type="email" name="emailaddress" placeholder="Indtast email" required>
+                <br>
+                <p class="inputp">Adresse</p><br>
+                <input class="inputform" type="text" name="adresse" placeholder="Indtast adresse" required>
+                <br>
+                <p class="inputp">Postnummer</p><br>
+                <input class="inputform" type="number" name="postnummer"  placeholder="Indtast postnummer" min="1000" max="9999" required>
+                <br><br>
+                <input id="checkbox" type="checkbox" name="terms" required><p id="pbetingelser"> Jeg bekræfter <span id="spanbetingelser">betingelser og vilkår</span></p>
+                <br><br>
+            </form>
+                <a href="feed.html"><button id="btntilmeld">Tilmeld</button></a>
+       </section>
+       
+   </main>
+    
+<script src="Javascript.js"></script>
+   
+</body>
+
+</html>
